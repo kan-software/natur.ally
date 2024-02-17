@@ -1,3 +1,10 @@
+import { Button } from './components/atoms/Button';
+
 export function App() {
-  return <h1 className="m-1 text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <Button variant="outlined">Cancel</Button>
+      <Button>Continue</Button>
+    </>
+  );
 }
