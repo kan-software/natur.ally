@@ -12,7 +12,11 @@ export default {
         base: ['1rem', '1.25rem'],
       },
       colors: {
-        'midnight-purple': '#423C66',
+        'midnight-purple': {
+          light: '#645D93',
+          DEFAULT: '#423C66',
+          dark: '#241E47',
+        },
       },
     },
   },
