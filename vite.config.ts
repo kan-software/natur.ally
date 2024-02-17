@@ -7,6 +7,8 @@ import react from '@vitejs/plugin-react-swc';
 export default defineConfig({
   plugins: [svgr({ include: '**/*.svg' }), react()],
   test: {
+    environment: 'happy-dom',
+    globals: true,
     setupFiles: ['@testing-library/jest-dom/vitest'],
   },
   resolve: {
