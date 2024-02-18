@@ -9,9 +9,9 @@ export function PageLayout({
   return (
     <div
       {...props}
-      className={twMerge('min-h-screen bg-[#F4F8FA]', props.className)}
+      className={twMerge('xs:min-h-screen xs:bg-[#F4F8FA]', props.className)}
     >
-      <PageHeader />
+      <PageHeader className=" max-xs:hidden" />
       <main>{children}</main>
     </div>
   );

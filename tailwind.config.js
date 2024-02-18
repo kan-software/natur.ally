@@ -26,10 +26,17 @@ export default {
           50: '#E9EEF2',
           900: '#1E2A32',
         },
+        stroke: '#E9EEF2',
         salmon: '#FFDBCB',
       },
       boxShadow: {
         card: '0px 16px 32px 0px #1E2A3214',
+      },
+      screens: {
+        xs: '480px',
+      },
+      borderRadius: {
+        xl: '0.625rem',
       },
     },
   },

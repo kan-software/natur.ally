@@ -1,5 +1,4 @@
-import ChevronLeftIcon from '@/assets/icons/chevron_left.svg';
-import ChevronRightIcon from '@/assets/icons/chevron_right.svg';
+import { SwitchButton } from '@/components/atoms/SwitchButton';
 import {
   addMonths,
   differenceInCalendarMonths,
@@ -24,14 +23,12 @@ export function DateSwitcher({ id, date, onChange }: DateSwitcherProps) {
 
   return (
     <div className="flex items-center justify-between rounded border border-blue-gray-50 p-3">
-      <button
-        className="hover:enabled:bg-[#F3F5FE] active:enabled:bg-[rgb(232,234,242)]"
+      <SwitchButton
+        direction="left"
         aria-label="Previous month"
         disabled={differenceInCalendarMonths(date, new Date()) <= 0}
         onClick={handlePreviousMonth}
-      >
-        <ChevronLeftIcon />
-      </button>
+      />
       <div
         id={id}
         aria-label="Selected date"
@@ -47,13 +44,11 @@ export function DateSwitcher({ id, date, onChange }: DateSwitcherProps) {
           {format(date, 'yyyy')}
         </span>
       </div>
-      <button
-        className="hover:bg-[#F3F5FE] active:bg-[#E8EAF2]"
+      <SwitchButton
+        direction="right"
         aria-label="Next month"
         onClick={handleNextMonth}
-      >
-        <ChevronRightIcon />
-      </button>
+      />
     </div>
   );
 }

@@ -25,13 +25,13 @@ export function DonationSummary({ amount, dateTo }: DonationSummaryProps) {
   const totalAmount = amount * donationMonthsCount;
 
   return (
-    <div>
+    <div className="max-xs:rounded max-xs:border max-xs:border-stroke max-xs:pt-6">
       <div className="flex items-center justify-between px-4">
-        <span className="font-primary text-xl font-medium text-blue-gray-900">
+        <span className="font-primary text-base font-medium text-blue-gray-900 xs:text-xl">
           Total amount
         </span>
         <span
-          className="text-right font-secondary text-4xl font-bold text-midnight-purple"
+          className="text-right font-secondary text-2xl font-bold text-midnight-purple xs:text-4xl"
           style={{ wordBreak: 'break-word' }}
           aria-label="Donation total amount"
         >
