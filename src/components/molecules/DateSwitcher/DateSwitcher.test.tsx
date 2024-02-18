@@ -5,12 +5,7 @@ import { userEvent } from '@testing-library/user-event';
 
 describe('DateSwitcher', () => {
   test('should display selected month and year with switch buttons', () => {
-    render(
-      <DateSwitcher
-        selectedDate={new Date(2023, 7, 1)}
-        onChange={vitest.fn()}
-      />,
-    );
+    render(<DateSwitcher date={new Date(2023, 7, 1)} onChange={vitest.fn()} />);
 
     expect(screen.getByLabelText(/selected month/i)).toHaveTextContent(
       'August',
@@ -27,9 +22,7 @@ describe('DateSwitcher', () => {
   test('should call `onChange` with previous month when previous month button is clicked', async () => {
     const onChange = vitest.fn();
 
-    render(
-      <DateSwitcher selectedDate={new Date(2023, 7, 1)} onChange={onChange} />,
-    );
+    render(<DateSwitcher date={new Date(2023, 7, 1)} onChange={onChange} />);
 
     await userEvent.click(
       screen.getByRole('button', { name: /previous month/i }),
@@ -41,9 +34,7 @@ describe('DateSwitcher', () => {
   test('should call `onChange` with next month when next month button is clicked', async () => {
     const onChange = vitest.fn();
 
-    render(
-      <DateSwitcher selectedDate={new Date(2023, 7, 1)} onChange={onChange} />,
-    );
+    render(<DateSwitcher date={new Date(2023, 7, 1)} onChange={onChange} />);
 
     await userEvent.click(screen.getByRole('button', { name: /next month/i }));
 

@@ -3,17 +3,17 @@ import ChevronRightIcon from '@/assets/icons/chevron_right.svg';
 import { addMonths, format, subMonths } from 'date-fns';
 
 type DateSwitcherProps = {
-  selectedDate: Date;
+  date: Date;
   onChange: (date: Date) => void;
 };
 
-export function DateSwitcher({ selectedDate, onChange }: DateSwitcherProps) {
+export function DateSwitcher({ date, onChange }: DateSwitcherProps) {
   const handlePreviousMonth = () => {
-    onChange(subMonths(selectedDate, 1));
+    onChange(subMonths(date, 1));
   };
 
   const handleNextMonth = () => {
-    onChange(addMonths(selectedDate, 1));
+    onChange(addMonths(date, 1));
   };
 
   return (
@@ -27,13 +27,13 @@ export function DateSwitcher({ selectedDate, onChange }: DateSwitcherProps) {
       </button>
       <div className="text-center font-tertiary *:block">
         <span className="text-base font-medium" aria-label="Selected month">
-          {format(selectedDate, 'LLLL')}
+          {format(date, 'LLLL')}
         </span>
         <span
           className="font-primary text-xs font-normal"
           aria-label="Selected year"
         >
-          {format(selectedDate, 'yyyy')}
+          {format(date, 'yyyy')}
         </span>
       </div>
       <button
