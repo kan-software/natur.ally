@@ -14,7 +14,7 @@ export function DonationForm() {
   const amountNumber = parseFloat(amount) || 0;
 
   return (
-    <Card>
+    <Card aria-label="donation form">
       <DonationHeader />
       <div className="px-10 py-8">
         <div className="mb-8 flex justify-between gap-6 *:flex-1">

@@ -1,13 +1,16 @@
 import { PageHeader } from '@/components/molecules/PageHeader';
-import { ReactNode } from 'react';
+import { HTMLAttributes } from 'react';
+import { twMerge } from 'tailwind-merge';
 
-type PageLayoutProps = {
-  children: ReactNode;
-};
-
-export function PageLayout({ children }: PageLayoutProps) {
+export function PageLayout({
+  children,
+  ...props
+}: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className="min-h-screen bg-[#F4F8FA]">
+    <div
+      {...props}
+      className={twMerge('min-h-screen bg-[#F4F8FA]', props.className)}
+    >
       <PageHeader />
       <main>{children}</main>
     </div>

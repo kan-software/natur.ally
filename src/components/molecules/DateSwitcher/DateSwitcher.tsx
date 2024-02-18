@@ -35,7 +35,7 @@ export function DateSwitcher({ id, date, onChange }: DateSwitcherProps) {
       <div
         id={id}
         aria-label="Selected date"
-        className="text-center font-tertiary text-midnight-gray *:block"
+        className="text-center font-tertiary text-midnight-purple *:block"
       >
         <span className="text-base font-medium" aria-label="Selected month">
           {format(date, 'LLLL')}
