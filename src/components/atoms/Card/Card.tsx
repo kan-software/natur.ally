@@ -5,7 +5,7 @@ export function Card(props: HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       {...props}
-      className={twMerge('bg-white shadow-card', props.className)}
+      className={twMerge('bg-white shadow-card xs:rounded-md', props.className)}
     />
   );
 }

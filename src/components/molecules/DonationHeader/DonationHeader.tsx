@@ -5,7 +5,7 @@ export function DonationHeader() {
   return (
     <header
       aria-label="donation header"
-      className="relative flex items-center gap-4 bg-salmon px-6 pb-7 pt-6 text-midnight-purple max-xs:flex-col xs:gap-5 xs:px-10 xs:pb-6 xs:pt-8"
+      className="relative flex items-center gap-4 bg-salmon px-6 pb-7 pt-6 text-midnight-purple max-xs:flex-col xs:gap-5 xs:rounded-t-md xs:px-10 xs:pb-6 xs:pt-8"
     >
       <DonationIcon aria-hidden="true" />
       <div className="max-xs:text-center">
