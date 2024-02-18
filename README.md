@@ -17,3 +17,7 @@ Then run following commands to install dependencies and run the project:
 yarn
 yarn dev
 ```
+
+## Comment about the task
+
+Please check `docs/KOMENTARZ_DO_ZADANIA.md` for further details.
