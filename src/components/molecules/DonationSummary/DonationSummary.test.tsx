@@ -1,7 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, test } from 'vitest';
 import { DonationSummary } from './DonationSummary';
-import { addMonths, format } from 'date-fns';
+import { addMonths } from 'date-fns';
+import { formatMonthYear } from '@/utils/formatters';
 
 describe('DonationSummary', () => {
   test('should render the donation summary', () => {
@@ -15,7 +16,7 @@ describe('DonationSummary', () => {
       '$100,000',
     );
     expect(screen.getByLabelText(/donation summary/i)).toHaveTextContent(
-      `You will be sending $25,000 every month, until ${format(dateTo, 'LLLL yyyy')}. Thank you!`,
+      `You will be sending $25,000 every month, until ${formatMonthYear(dateTo)}. Thank you!`,
     );
   });
 });

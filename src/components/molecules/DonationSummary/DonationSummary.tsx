@@ -1,14 +1,10 @@
-import { differenceInCalendarMonths, format } from 'date-fns';
+import { formatAmount, formatMonthYear } from '@/utils/formatters';
+import { differenceInCalendarMonths } from 'date-fns';
 
 type DonationSummaryProps = {
   amount: number;
   dateTo: Date;
 };
-
-const formatAmount = (amount: number) =>
-  `$${new Intl.NumberFormat('en-US').format(amount)}`;
-
-const formatDate = (date: Date) => format(date, 'LLLL yyyy');
 
 const renderSummaryValue = (value: string) => (
   <strong
@@ -41,7 +37,7 @@ export function DonationSummary({ amount, dateTo }: DonationSummaryProps) {
       <div className="mt-6 bg-[#F4F8FA] px-4 py-6 font-primary text-xs font-normal">
         <span aria-label="Donation summary">
           You will be sending {renderSummaryValue(formatAmount(amount))} every
-          month, until {renderSummaryValue(formatDate(dateTo))}. Thank you!
+          month, until {renderSummaryValue(formatMonthYear(dateTo))}. Thank you!
         </span>
       </div>
     </div>

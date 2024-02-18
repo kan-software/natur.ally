@@ -2,7 +2,8 @@ import { render, screen } from '@testing-library/react';
 import { describe, expect, test, vitest } from 'vitest';
 import { DateSwitcher } from './DateSwitcher';
 import { userEvent } from '@testing-library/user-event';
-import { addMonths, format, subMonths } from 'date-fns';
+import { addMonths, subMonths } from 'date-fns';
+import { formatMonth, formatYear } from '@/utils/formatters';
 
 describe('DateSwitcher', () => {
   test('should display selected month and year with switch buttons', () => {
@@ -11,10 +12,10 @@ describe('DateSwitcher', () => {
     render(<DateSwitcher date={date} onChange={vitest.fn()} />);
 
     expect(screen.getByLabelText(/selected month/i)).toHaveTextContent(
-      format(date, 'LLLL'),
+      formatMonth(date),
     );
     expect(screen.getByLabelText(/selected year/i)).toHaveTextContent(
-      format(date, 'yyyy'),
+      formatYear(date),
     );
     expect(
       screen.getByRole('button', { name: /previous month/i }),

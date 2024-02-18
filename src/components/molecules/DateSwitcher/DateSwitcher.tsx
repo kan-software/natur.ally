@@ -1,10 +1,6 @@
 import { SwitchButton } from '@/components/atoms/SwitchButton';
-import {
-  addMonths,
-  differenceInCalendarMonths,
-  format,
-  subMonths,
-} from 'date-fns';
+import { formatMonth, formatYear } from '@/utils/formatters';
+import { addMonths, differenceInCalendarMonths, subMonths } from 'date-fns';
 
 type DateSwitcherProps = {
   id?: string;
@@ -35,13 +31,13 @@ export function DateSwitcher({ id, date, onChange }: DateSwitcherProps) {
         className="text-center font-tertiary text-midnight-purple *:block"
       >
         <span className="text-base font-medium" aria-label="Selected month">
-          {format(date, 'LLLL')}
+          {formatMonth(date)}
         </span>
         <span
           className="font-primary text-xs font-normal"
           aria-label="Selected year"
         >
-          {format(date, 'yyyy')}
+          {formatYear(date)}
         </span>
       </div>
       <SwitchButton
