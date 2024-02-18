@@ -11,6 +11,7 @@ export default {
       fontSize: {
         base: ['1rem', '1.25rem'],
         sm: ['0.875rem', '1.125rem'],
+        xl: ['1.25rem', '1.5rem'],
         '2xl': ['1.5rem', '1.75rem'],
         '4xl': ['2rem', '2.375rem'],
       },
@@ -23,6 +24,7 @@ export default {
         'midnight-gray': '#4D6475',
         'blue-gray': {
           50: '#E9EEF2',
+          900: '#1E2A32',
         },
         salmon: '#FFDBCB',
       },
