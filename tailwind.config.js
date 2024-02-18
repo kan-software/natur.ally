@@ -36,6 +36,7 @@ export default {
         xs: '480px',
       },
       borderRadius: {
+        md: '0.313rem',
         xl: '0.625rem',
       },
     },
