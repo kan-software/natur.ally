@@ -28,6 +28,9 @@ export default {
         },
         salmon: '#FFDBCB',
       },
+      boxShadow: {
+        card: '0px 16px 32px 0px #1E2A3214',
+      },
     },
   },
   plugins: [],

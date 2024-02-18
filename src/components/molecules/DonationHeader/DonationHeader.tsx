@@ -2,7 +2,7 @@ import DonationIcon from '@/assets/icons/donation.svg';
 
 export function DonationHeader() {
   return (
-    <div className="flex items-center gap-5 bg-salmon px-10 pb-6 pt-8 text-midnight-purple">
+    <header className="flex items-center gap-5 bg-salmon px-10 pb-6 pt-8 text-midnight-purple">
       <DonationIcon aria-hidden="true" />
       <div>
         <h2 className="font-primary text-4xl font-semibold">
@@ -12,6 +12,6 @@ export function DonationHeader() {
           Set up your donation goal!
         </p>
       </div>
-    </div>
+    </header>
   );
 }

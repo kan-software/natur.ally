@@ -1,9 +1,5 @@
-import { DonationForm } from './components/organisms/DonationForm';
+import { DonationPage } from './pages/DonationPage';
 
 export function App() {
-  return (
-    <main>
-      <DonationForm />
-    </main>
-  );
+  return <DonationPage />;
 }

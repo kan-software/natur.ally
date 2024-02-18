@@ -6,6 +6,7 @@ import { AmountInput } from '@/components/molecules/AmountInput';
 import { DateSwitcher } from '@/components/molecules/DateSwitcher';
 import { DonationHeader } from '@/components/molecules/DonationHeader';
 import { DonationSummary } from '@/components/molecules/DonationSummary';
+import { Card } from '@/components/atoms/Card';
 
 export function DonationForm() {
   const [amount, setAmount] = useState('25000');
@@ -13,7 +14,7 @@ export function DonationForm() {
   const amountNumber = parseFloat(amount) || 0;
 
   return (
-    <>
+    <Card>
       <DonationHeader />
       <div className="px-10 py-8">
         <div className="mb-8 flex justify-between gap-6 *:flex-1">
@@ -44,6 +45,6 @@ export function DonationForm() {
           <Button>Continue</Button>
         </div>
       </div>
-    </>
+    </Card>
   );
 }

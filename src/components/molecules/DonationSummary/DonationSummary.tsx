@@ -11,7 +11,12 @@ const formatAmount = (amount: number) =>
 const formatDate = (date: Date) => format(date, 'LLLL yyyy');
 
 const renderSummaryValue = (value: string) => (
-  <strong className="font-secondary text-xs font-bold">{value}</strong>
+  <strong
+    className="font-secondary text-xs font-bold"
+    style={{ wordBreak: 'break-word' }}
+  >
+    {value}
+  </strong>
 );
 
 export function DonationSummary({ amount, dateTo }: DonationSummaryProps) {
@@ -27,6 +32,7 @@ export function DonationSummary({ amount, dateTo }: DonationSummaryProps) {
         </span>
         <span
           className="text-right font-secondary text-4xl font-bold text-midnight-purple"
+          style={{ wordBreak: 'break-word' }}
           aria-label="Donation total amount"
         >
           {formatAmount(totalAmount)}
