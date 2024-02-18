@@ -10,7 +10,7 @@ export function AmountInput(props: CurrencyInputProps) {
       <CurrencyInput
         {...props}
         placeholder="0.00"
-        className="rounded border border-blue-gray-50 py-4 pl-10 pr-4 font-tertiary text-2xl font-medium text-midnight-purple outline-none placeholder:text-[#00000033] focus:border-midnight-purple"
+        className="w-full rounded border border-blue-gray-50 py-4 pl-10 pr-4 font-tertiary text-2xl font-medium text-midnight-purple outline-none placeholder:text-[#00000033] focus:border-midnight-purple"
       />
     </div>
   );

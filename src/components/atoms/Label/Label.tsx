@@ -6,7 +6,7 @@ export function Label(props: LabelHTMLAttributes<HTMLLabelElement>) {
     <label
       {...props}
       className={twMerge(
-        `font-primary text-sm font-medium text-midnight-gray`,
+        `inline-block font-primary text-sm font-medium text-midnight-gray`,
         props.className,
       )}
     />
